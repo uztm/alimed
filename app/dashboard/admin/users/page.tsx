@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { DataTableDemo } from "@/components/demo/dataTable";
 import { Button } from "@/components/ui/button";
-import { Home } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
 import Link from "next/link";
 import { crud } from "@/app/api/apiService";
 import { Patient, PatientsResponse } from "@/types/Patient";
@@ -33,11 +33,8 @@ export default function Page() {
     <div className="w-full min-h-[100vh] bg-background py-10">
       <div className="container mx-auto px-4">
         <div
-          className="w-full h-[120px] rounded-md mb-5 flex items-center px-12 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://avatars.mds.yandex.net/i?id=15d8c8e8531a916cc89ba7429b065889_l-4936065-images-thumbs&n=13')",
-          }}
+          className="w-full h-[120px] border-1 border-primary bg-secondary rounded-md mb-5 flex items-center px-12 bg-cover bg-center"
+          
         >
           <div className="flex items-center gap-4 justify-between w-full">
             <Link href={"/dashboard/admin"}>
@@ -46,21 +43,21 @@ export default function Page() {
                 variant={"outline"}
                 size={"icon"}
               >
-                <Home />
+                <ArrowLeft />
               </Button>
             </Link>
-            <h1 className="font-bold text-2xl text-white drop-shadow">
+            <h1 className="font-bold text-2xl text-primary drop-shadow">
               Patients
             </h1>
 
             <Button
               className="ml-auto"
               onClick={() => {
-                setCreateRole("patient");
+                setCreateRole("doctor");
                 setOpenDialog(true);
               }}
             >
-              Create Patient
+              Create Doctor
             </Button>
           </div>
         </div>

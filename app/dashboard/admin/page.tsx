@@ -33,23 +33,10 @@ export default function Page() {
   return (
     <div className="w-full min-h-[100vh] bg-background py-10">
       <div className="container mx-auto px-4">
-        <div
-          className="w-full h-[120px] rounded-md mb-5 flex items-center px-12 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://avatars.mds.yandex.net/i?id=15d8c8e8531a916cc89ba7429b065889_l-4936065-images-thumbs&n=13')",
-          }}
-        >
-          <h1 className="font-bold text-2xl text-white drop-shadow">
-            Admin Dashboard
-          </h1>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {cmds.map((cmd, i) => (
             <Link href={`/dashboard/admin/${cmd.name.toLowerCase()}`} key={i}>
-              <div className="bg-card  p-6 rounded-md shadow text-center cursor-pointer hover:bg-primary/90 hover:text-white text-foreground transition">
-                <div className="flex justify-center mb-2">{cmd.icon}</div>
+              <div className="p-6 rounded-md border-1 border-primary bg-secondary text-center cursor-pointer ">
                 <div className="font-semibold">{cmd.name}</div>
               </div>
             </Link>

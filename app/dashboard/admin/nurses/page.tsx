@@ -34,10 +34,7 @@ export default function Page() {
       <div className="container mx-auto px-4">
         <div
           className="w-full h-[120px] rounded-md mb-5 flex items-center px-12 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://avatars.mds.yandex.net/i?id=15d8c8e8531a916cc89ba7429b065889_l-4936065-images-thumbs&n=13')",
-          }}
+          
         >
           <h1 className="font-bold text-2xl text-white drop-shadow">
             Admin Dashboard
